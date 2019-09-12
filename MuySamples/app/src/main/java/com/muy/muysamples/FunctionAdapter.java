@@ -11,9 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.muy.muysamples.animation.AnimatedVectorActivity;
+import com.muy.muysamples.event.EventHandleActivity;
 import com.muy.muysamples.http.HttpSampleActivity;
 import com.muy.muysamples.lottieanimtion.LottieAnimActivity;
 import com.muy.muysamples.notification.NotificationActivity;
+import com.muy.muysamples.permission.PermissionSampleActivity;
 import com.muy.muysamples.recyclerview.RecyclerViewSampleActivity;
 import com.muy.muysamples.systemui.SystemUiActivity;
 import com.muy.muysamples.wallpaper.LiveWallpaperActivity;
@@ -29,9 +31,13 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
     private final static String SAMPLE_WALLPAPER = "Wallpaper Sample";
     private final static String SAMPLE_VECTOR_ANIM = "Vector Animation Sample";
     private final static String SAMPLE_WIDGET = "Widgets Sample";
+    private final static String SAMPLE_EVENT_HANDLE = "Event Handle Sample";
+    private final static String SAMPLE_PERMISSION = "Permission Sample";
+
 
     private String[] functions = {SAMPLE_RECYCLER_VIEW, SAMPLE_HTTP, SAMPLE_NOTIFICATION, SAMPLE_SYSTEM_UI,
-            SAMPLE_LOTTIE_ANIM, SAMPLE_WALLPAPER, SAMPLE_VECTOR_ANIM, "TODO Sample"};
+            SAMPLE_LOTTIE_ANIM, SAMPLE_WALLPAPER, SAMPLE_VECTOR_ANIM, SAMPLE_WIDGET, SAMPLE_EVENT_HANDLE,
+            SAMPLE_PERMISSION, "TODO Sample"};
 
     private Activity context;
 
@@ -95,6 +101,11 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
                         case SAMPLE_WIDGET:
                             openNewPage(CheckboxSampleActivity.class);
                             break;
+                        case SAMPLE_EVENT_HANDLE:
+                            openNewPage(EventHandleActivity.class);
+                            break;
+                        case SAMPLE_PERMISSION:
+                            openNewPage(PermissionSampleActivity.class);
                         default:
                             Toast.makeText(itemView.getContext(), data, Toast.LENGTH_SHORT).show();
                             break;
