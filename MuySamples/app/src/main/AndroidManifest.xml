@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.muy.muysamples">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,9 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".permission.PermissionSampleActivity"></activity>
+        <activity android:name=".wrapper.WrapperSampleActivity" />
+        <activity android:name=".permission.PermissionSampleActivity" />
         <activity android:name=".event.EventHandleActivity" />
-        <activity android:name=".widget.CheckboxSampleActivity" />
+        <activity android:name=".widget.WidgetSampleActivity" />
         <activity android:name=".animation.AnimatedVectorActivity" />
         <activity android:name=".wallpaper.LiveWallpaperActivity" />
         <activity android:name=".lottieanimtion.LottieAnimActivity" />
@@ -37,12 +40,12 @@
             </intent-filter>
         </service>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <uses-permission
         android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
 </manifest>

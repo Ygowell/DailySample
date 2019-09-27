@@ -19,7 +19,8 @@ import com.muy.muysamples.permission.PermissionSampleActivity;
 import com.muy.muysamples.recyclerview.RecyclerViewSampleActivity;
 import com.muy.muysamples.systemui.SystemUiActivity;
 import com.muy.muysamples.wallpaper.LiveWallpaperActivity;
-import com.muy.muysamples.widget.CheckboxSampleActivity;
+import com.muy.muysamples.widget.WidgetSampleActivity;
+import com.muy.muysamples.wrapper.WrapperSampleActivity;
 
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextViewHolder> {
 
@@ -33,11 +34,11 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
     private final static String SAMPLE_WIDGET = "Widgets Sample";
     private final static String SAMPLE_EVENT_HANDLE = "Event Handle Sample";
     private final static String SAMPLE_PERMISSION = "Permission Sample";
-
+    private final static String SAMPLE_WRAPPER = "Wrapper Sample";
 
     private String[] functions = {SAMPLE_RECYCLER_VIEW, SAMPLE_HTTP, SAMPLE_NOTIFICATION, SAMPLE_SYSTEM_UI,
             SAMPLE_LOTTIE_ANIM, SAMPLE_WALLPAPER, SAMPLE_VECTOR_ANIM, SAMPLE_WIDGET, SAMPLE_EVENT_HANDLE,
-            SAMPLE_PERMISSION, "TODO Sample"};
+            SAMPLE_PERMISSION, SAMPLE_WRAPPER, "TODO Sample"};
 
     private Activity context;
 
@@ -99,13 +100,17 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
                             openNewPage(AnimatedVectorActivity.class);
                             break;
                         case SAMPLE_WIDGET:
-                            openNewPage(CheckboxSampleActivity.class);
+                            openNewPage(WidgetSampleActivity.class);
                             break;
                         case SAMPLE_EVENT_HANDLE:
                             openNewPage(EventHandleActivity.class);
                             break;
                         case SAMPLE_PERMISSION:
                             openNewPage(PermissionSampleActivity.class);
+                            break;
+                        case SAMPLE_WRAPPER:
+                            openNewPage(WrapperSampleActivity.class);
+                            break;
                         default:
                             Toast.makeText(itemView.getContext(), data, Toast.LENGTH_SHORT).show();
                             break;

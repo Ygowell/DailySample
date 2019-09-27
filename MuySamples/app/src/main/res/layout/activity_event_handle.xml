@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.muy.muysamples.event.FatherLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/view_father"
     android:layout_width="match_parent"
@@ -10,8 +9,9 @@
 
     <com.muy.muysamples.event.ChildView
         android:id="@+id/view_child"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#998833"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#998833" />
 
 </com.muy.muysamples.event.FatherLayout>
