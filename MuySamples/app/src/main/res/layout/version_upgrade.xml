@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_version_upgrade" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Update Title"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_apk_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#cccccc"
+            android:textSize="14sp"
+            tools:text="V1.2.8.0 | 5.2Mb" />
+
+        <TextView
+            android:id="@+id/tv_update_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="22dp"
+            android:gravity="start"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            tools:text="1. More video wallpapers are available now!\n2. We fixed some bugs as well." />
+
+        <Button
+            android:id="@+id/btn_update_now"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="27dp"
+            android:background="@drawable/upgrade_btn_sel"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Update Now"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -16,16 +16,17 @@ import com.muy.muysamples.http.HttpSampleActivity;
 import com.muy.muysamples.lottieanimtion.LottieAnimActivity;
 import com.muy.muysamples.notification.NotificationActivity;
 import com.muy.muysamples.permission.PermissionSampleActivity;
+import com.muy.muysamples.popupwindow.PopupActivity;
 import com.muy.muysamples.recyclerview.RecyclerViewSampleActivity;
 import com.muy.muysamples.systemui.SystemUiActivity;
 import com.muy.muysamples.wallpaper.LiveWallpaperActivity;
 import com.muy.muysamples.widget.WidgetSampleActivity;
-import com.muy.muysamples.wrapper.WrapperSampleActivity;
 
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextViewHolder> {
 
     private final static String SAMPLE_RECYCLER_VIEW = "RecyclerView Sample";
     private final static String SAMPLE_HTTP = "Http Sample";
+    private final static String SAMPLE_POPUP = "Popup window Sample";
     private final static String SAMPLE_NOTIFICATION = "Notification Sample";
     private final static String SAMPLE_SYSTEM_UI = "System UI Sample";
     private final static String SAMPLE_LOTTIE_ANIM = "Lottie Animation Sample";
@@ -34,11 +35,11 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
     private final static String SAMPLE_WIDGET = "Widgets Sample";
     private final static String SAMPLE_EVENT_HANDLE = "Event Handle Sample";
     private final static String SAMPLE_PERMISSION = "Permission Sample";
-    private final static String SAMPLE_WRAPPER = "Wrapper Sample";
 
-    private String[] functions = {SAMPLE_RECYCLER_VIEW, SAMPLE_HTTP, SAMPLE_NOTIFICATION, SAMPLE_SYSTEM_UI,
+
+    private String[] functions = {SAMPLE_RECYCLER_VIEW, SAMPLE_HTTP, SAMPLE_POPUP, SAMPLE_NOTIFICATION, SAMPLE_SYSTEM_UI,
             SAMPLE_LOTTIE_ANIM, SAMPLE_WALLPAPER, SAMPLE_VECTOR_ANIM, SAMPLE_WIDGET, SAMPLE_EVENT_HANDLE,
-            SAMPLE_PERMISSION, SAMPLE_WRAPPER, "TODO Sample"};
+            SAMPLE_PERMISSION, "TODO Sample"};
 
     private Activity context;
 
@@ -84,6 +85,9 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
                         case SAMPLE_HTTP:
                             openNewPage(HttpSampleActivity.class);
                             break;
+                        case SAMPLE_POPUP:
+                            openNewPage(PopupActivity.class);
+                            break;
                         case SAMPLE_NOTIFICATION:
                             openNewPage(NotificationActivity.class);
                             break;
@@ -107,10 +111,6 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
                             break;
                         case SAMPLE_PERMISSION:
                             openNewPage(PermissionSampleActivity.class);
-                            break;
-                        case SAMPLE_WRAPPER:
-                            openNewPage(WrapperSampleActivity.class);
-                            break;
                         default:
                             Toast.makeText(itemView.getContext(), data, Toast.LENGTH_SHORT).show();
                             break;

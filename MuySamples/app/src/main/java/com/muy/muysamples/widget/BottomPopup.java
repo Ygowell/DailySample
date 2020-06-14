@@ -22,11 +22,11 @@ public class BottomPopup {
     private ObjectAnimator animator;
 
     public BottomPopup(Context context) {
-        popupView = LayoutInflater.from(context).inflate(R.layout.bottom_popup_view, null);
+//        popupView = LayoutInflater.from(context).inflate(R.layout.bottom_popup_view, null);
 //        popupView.setOnTouchListener(touchListener);
 
-        popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.MATCH_PARENT,
-                context.getResources().getDimensionPixelSize(R.dimen.bottom_popup_height));
+//        popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.MATCH_PARENT,
+//                context.getResources().getDimensionPixelSize(R.dimen.bottom_popup_height));
 
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.setFocusable(true);
