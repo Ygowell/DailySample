@@ -1,11 +1,10 @@
 package com.muy.muysamples.event;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.muy.library.UIUtils;
 import com.muy.muysamples.MuyLog;
 import com.muy.muysamples.R;
 

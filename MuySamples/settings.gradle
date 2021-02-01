@@ -1,1 +1,2 @@
+include ':lib-view-customer'
 include ':app', ':library', ':vanimager'

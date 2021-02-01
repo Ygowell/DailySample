@@ -2,8 +2,9 @@ package com.muy.muysamples;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +16,11 @@ import com.muy.muysamples.event.EventHandleActivity;
 import com.muy.muysamples.http.HttpSampleActivity;
 import com.muy.muysamples.lottieanimtion.LottieAnimActivity;
 import com.muy.muysamples.notification.NotificationActivity;
+import com.muy.muysamples.permission.PermissionActivity;
 import com.muy.muysamples.permission.PermissionSampleActivity;
 import com.muy.muysamples.popupwindow.PopupActivity;
 import com.muy.muysamples.recyclerview.RecyclerViewSampleActivity;
+import com.muy.muysamples.storage.ScopedStorageActivity;
 import com.muy.muysamples.systemui.SystemUiActivity;
 import com.muy.muysamples.wallpaper.LiveWallpaperActivity;
 import com.muy.muysamples.widget.WidgetSampleActivity;
@@ -35,11 +38,13 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
     private final static String SAMPLE_WIDGET = "Widgets Sample";
     private final static String SAMPLE_EVENT_HANDLE = "Event Handle Sample";
     private final static String SAMPLE_PERMISSION = "Permission Sample";
+    private final static String SAMPLE_SCOPED_STORAGE = "SCOPED STORAGE Sample";
+
 
 
     private String[] functions = {SAMPLE_RECYCLER_VIEW, SAMPLE_HTTP, SAMPLE_POPUP, SAMPLE_NOTIFICATION, SAMPLE_SYSTEM_UI,
             SAMPLE_LOTTIE_ANIM, SAMPLE_WALLPAPER, SAMPLE_VECTOR_ANIM, SAMPLE_WIDGET, SAMPLE_EVENT_HANDLE,
-            SAMPLE_PERMISSION, "TODO Sample"};
+            SAMPLE_PERMISSION, SAMPLE_SCOPED_STORAGE, "TODO Sample"};
 
     private Activity context;
 
@@ -110,7 +115,11 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.TextVi
                             openNewPage(EventHandleActivity.class);
                             break;
                         case SAMPLE_PERMISSION:
-                            openNewPage(PermissionSampleActivity.class);
+                            openNewPage(PermissionActivity.class);
+                            break;
+                        case SAMPLE_SCOPED_STORAGE:
+                            openNewPage(ScopedStorageActivity.class);
+                            break;
                         default:
                             Toast.makeText(itemView.getContext(), data, Toast.LENGTH_SHORT).show();
                             break;

@@ -1,8 +1,8 @@
 package com.muy.muysamples.permission.helper;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 
 public class ActivityPermissionHelper extends PermissionHelper {
 

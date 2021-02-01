@@ -1,7 +1,7 @@
 package com.muy.muysamples.lottieanimtion
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.muy.muysamples.R
 
 class LottieAnimActivity : AppCompatActivity() {

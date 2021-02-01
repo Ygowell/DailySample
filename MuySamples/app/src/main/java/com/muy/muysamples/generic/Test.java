@@ -1,10 +1,9 @@
 package com.muy.muysamples.generic;
 
-import android.support.v7.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.muy.muysamples.App;
 import com.muy.muysamples.generic.model.Apple;
 import com.muy.muysamples.generic.model.Fruit;
 

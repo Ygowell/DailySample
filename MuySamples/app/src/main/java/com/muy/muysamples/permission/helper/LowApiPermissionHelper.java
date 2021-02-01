@@ -1,7 +1,7 @@
 package com.muy.muysamples.permission.helper;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.muy.muysamples.MuyLog;
 

@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
@@ -20,7 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".lottieanimtion.LottieAnimActivity"></activity>
+
+        <activity android:name=".storage.ScopedStorageActivity" />
+        <activity android:name=".lottieanimtion.LottieAnimActivity" />
         <activity android:name=".wrapper.WrapperSampleActivity" />
         <activity android:name=".permission.PermissionSampleActivity" />
         <activity android:name=".event.EventHandleActivity" />
@@ -38,6 +42,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".permission.PermissionActivity" />
 
         <service
             android:name=".wallpaper.LiveWallpaperService"

@@ -2,9 +2,8 @@ package com.muy.muysamples.wallpaper
 
 import android.app.WallpaperManager
 import android.graphics.BitmapFactory
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.muy.muysamples.R
 import kotlinx.android.synthetic.main.activity_live_wallpaper.*
 import java.io.IOException

@@ -1,8 +1,7 @@
 package com.muy.muysamples.permission
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.muy.muysamples.R
 
 class PermissionSampleActivity : AppCompatActivity() {
@@ -14,6 +13,7 @@ class PermissionSampleActivity : AppCompatActivity() {
 
     private fun requestRuntimePermission(permissions : Array<String>) {
         var permissionList = ArrayList<String>()
+
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {

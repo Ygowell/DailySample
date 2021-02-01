@@ -5,9 +5,9 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.AsyncTask
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.muy.muysamples.R
 import kotlinx.android.synthetic.main.activity_http_sample.*
 import java.io.*
@@ -78,7 +78,7 @@ class HttpSampleActivity : AppCompatActivity(), RequestCallback<String> {
 
     override fun getActiveNetworkInfo(): NetworkInfo {
         val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        return connectivityManager.activeNetworkInfo
+        return connectivityManager.activeNetworkInfo!!
     }
 
     override fun onProgressUpdate(progressCode: Int, percentComplete: Int) {
