@@ -1,6 +1,8 @@
 package com.muy.muysamples.widget
 
 import android.content.Context
+import android.text.SpannableString
+import android.text.Spanned
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.Log
@@ -67,22 +69,22 @@ class SmartTextView(context: Context, attrs: AttributeSet?) : AppCompatTextView(
             wordBuilder.append(" ")
         }
 
-        val result = wordBuilder.subSequence(0, wordBuilder.length - 1)
-        return result
+//        val result = wordBuilder.subSequence(0, wordBuilder.length - 1)
+//        return result
 
-//        val spannableString = SpannableString()
-//        if (originalText is Spanned) {
-//            TextUtils.copySpansFrom(
-//                    originalText,
-//                    0,
-//                    originalText.length,
-//                    null,
-//                    spannableString,
-//                    0
-//            )
-//        }
-//
-//        return spannableString
+        val spannableString = SpannableString(wordBuilder.toString())
+        if (originalText is Spanned) {
+            TextUtils.copySpansFrom(
+                    originalText,
+                    0,
+                    originalText.length,
+                    null,
+                    spannableString,
+                    0
+            )
+        }
+
+        return spannableString
 
 //        val lineTexts = rawText.replace("\r", "").split("\n")
 //        val stringBuilder = StringBuilder()
